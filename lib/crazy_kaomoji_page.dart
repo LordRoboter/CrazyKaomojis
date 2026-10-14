@@ -3,9 +3,10 @@ import 'package:crazy_kaomojis/kaomoji_effect_host.dart';
 import 'package:flutter/material.dart';
 
 class CrazyKaomojiPage extends StatefulWidget {
-  const CrazyKaomojiPage({super.key, this.text});
+  const CrazyKaomojiPage({super.key, this.text, this.theme});
 
   final String? text;
+  final ThemeData? theme;
 
   @override
   State<CrazyKaomojiPage> createState() => _CrazyKaomojiPageState();
@@ -40,11 +41,14 @@ class _CrazyKaomojiPageState extends State<CrazyKaomojiPage> {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              KaomojiEffectHost(
-                key: ValueKey(_kaomoji),
-                definition: definition,
-                text: widget.text,
-                onTap: _onKaomojiTap,
+              Theme(
+                data: widget.theme ?? Theme.of(context),
+                child: KaomojiEffectHost(
+                  key: ValueKey(_kaomoji),
+                  definition: definition,
+                  text: widget.text,
+                  onTap: _onKaomojiTap,
+                ),
               ),
             ],
           ),
