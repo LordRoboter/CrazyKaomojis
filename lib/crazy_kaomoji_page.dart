@@ -1,6 +1,6 @@
 import 'package:crazy_kaomojis/kaomoji_definiton.dart';
 import 'package:crazy_kaomojis/kaomoji_effect_host.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CrazyKaomojiPage extends StatefulWidget {
   const CrazyKaomojiPage({super.key, this.text, this.theme});

@@ -2,7 +2,7 @@ import 'package:crazy_kaomojis/effects/dance_effect.dart';
 import 'package:crazy_kaomojis/effects/no_effect.dart';
 import 'package:crazy_kaomojis/effects/rain_effect.dart';
 import 'package:crazy_kaomojis/kaomoji_definiton.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 typedef KaomojiEffectBuilder = Widget Function(
   BuildContext context,

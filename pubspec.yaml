@@ -1,6 +1,6 @@
 name: crazy_kaomojis
 description: "Funny kaomoji page that switch when tapped."
-version: 1.0.4
+version: 1.0.5
 homepage:
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  material_ui: ^1.6.0
 
 dev_dependencies:
   flutter_test:
