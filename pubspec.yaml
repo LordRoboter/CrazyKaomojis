@@ -1,6 +1,6 @@
 name: crazy_kaomojis
-description: "A new Flutter package project."
-version: 0.0.1
+description: "Funny kaomoji page that switch when tapped."
+version: 1.0.0
 homepage:
 
 environment:
