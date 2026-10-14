@@ -90,7 +90,10 @@ class _DanceEffectState extends State<DanceEffect>
                     if (widget.text != null && widget.text!.isNotEmpty) ...[
                       Text(
                         "${widget.text}!",
-                        style: Theme.of(context).textTheme.titleMedium,
+                        style: Theme.of(context).textTheme.headlineMedium
+                            ?.copyWith(
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
                         textAlign: TextAlign.center,
                       ),
                     ],

@@ -20,7 +20,11 @@ class NoEffect extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(face, style: Theme.of(context).textTheme.headlineMedium),
+            Text(
+              face,
+              style: Theme.of(context).textTheme.headlineMedium
+                  ?.copyWith(color: Theme.of(context).colorScheme.onSurface),
+            ),
 
             const SizedBox(height: 12),
             if (text != null && text!.isNotEmpty) ...[
