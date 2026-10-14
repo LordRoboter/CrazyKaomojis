@@ -1,6 +1,6 @@
 import 'package:crazy_kaomojis/kaomoji_definiton.dart';
 import 'package:crazy_kaomojis/kaomoji_effect_host.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class CrazyKaomojiPage extends StatefulWidget {
   const CrazyKaomojiPage({super.key, this.text});
@@ -15,14 +15,15 @@ class _CrazyKaomojiPageState extends State<CrazyKaomojiPage> {
   Kaomoji _kaomoji = Kaomoji.worried;
 
   void _onKaomojiTap() {
+    final options = Kaomoji.values
+        .where((k) => k != _kaomoji && kaomojis.containsKey(k))
+        .toList();
+
+    if (options.isEmpty) return;
+
+    options.shuffle();
+
     setState(() {
-      final options = Kaomoji.values
-          .where((k) => k != _kaomoji && kaomojis.containsKey(k))
-          .toList();
-
-      if (options.isEmpty) return;
-
-      options.shuffle();
       _kaomoji = options.first;
     });
   }
@@ -30,7 +31,6 @@ class _CrazyKaomojiPageState extends State<CrazyKaomojiPage> {
   @override
   Widget build(BuildContext context) {
     final definition = kaomojis[_kaomoji]!;
-    debugPrint(definition.face);
 
     return LayoutBuilder(
       builder: (context, constraints) {

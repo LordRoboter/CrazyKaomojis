@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DanceEffect extends StatefulWidget {
   const DanceEffect({
@@ -90,10 +89,7 @@ class _DanceEffectState extends State<DanceEffect>
                     if (widget.text != null && widget.text!.isNotEmpty) ...[
                       Text(
                         "${widget.text}!",
-                        style: Theme.of(context).textTheme.headlineMedium
-                            ?.copyWith(
-                              color: Theme.of(context).colorScheme.onSurface,
-                            ),
+                        style: Theme.of(context).textTheme.headlineMedium,
                         textAlign: TextAlign.center,
                       ),
                     ],

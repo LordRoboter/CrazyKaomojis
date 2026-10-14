@@ -1,7 +1,7 @@
 import 'package:crazy_kaomojis/effects/no_effect.dart';
 import 'package:crazy_kaomojis/kaomoji_definiton.dart';
 import 'package:crazy_kaomojis/kaomoji_effect_register.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class KaomojiEffectHost extends StatelessWidget {
   const KaomojiEffectHost({

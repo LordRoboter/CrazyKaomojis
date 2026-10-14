@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NoEffect extends StatelessWidget {
   const NoEffect({
@@ -20,11 +19,7 @@ class NoEffect extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              face,
-              style: Theme.of(context).textTheme.headlineMedium
-                  ?.copyWith(color: Theme.of(context).colorScheme.onSurface),
-            ),
+            Text(face, style: Theme.of(context).textTheme.headlineMedium),
 
             const SizedBox(height: 12),
             if (text != null && text!.isNotEmpty) ...[
